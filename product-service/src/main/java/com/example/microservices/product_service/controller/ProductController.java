@@ -1,6 +1,6 @@
-package com.example.microservices.controller;
+package src.main.java.com.example.microservices.product_service.controller;
 
-import com.example.microservices.dto.ProductDto;
+import src.main.java.com.example.microservices.product_service.dto.ProductDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
