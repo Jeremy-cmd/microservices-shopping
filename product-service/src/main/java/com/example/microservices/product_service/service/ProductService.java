@@ -1,4 +1,4 @@
-package src.main.java.com.example.microservices.product_service.service;
+package com.example.microservices.product_service.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
