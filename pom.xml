@@ -81,6 +81,10 @@
 		</dependency>
 	</dependencies>
 
+	<modules>
+		<module>product-service</module>
+	</modules>
+
 	<build>
 		<plugins>
 			<plugin>
