@@ -1,2 +1,4 @@
-package com.example.inventory_service.config;public class OpenApiConfig {
+package com.example.inventory_service.config;
+
+public class OpenApiConfig {
 }
