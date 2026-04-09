@@ -41,8 +41,8 @@ spec:
     app: inventory-service
   ports:
     - protocol: TCP
-      port: 8082
-      targetPort: 8082
+      port: 8083
+      targetPort: 8083
 ---
 apiVersion: v1
 kind: ConfigMap
