@@ -13,7 +13,7 @@ spec:
         app: api-gateway
     spec:
       containers:
-        - name: api-gatewat
+        - name: api-gateway
           image: jeremy857/new-api-gateway:latest
           ports:
             - containerPort: 9000
@@ -22,7 +22,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   key: SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER-URI
-                  name: api-gatewat-config
+                  name: api-gateway-config
             - name: LOKI_URL
               valueFrom:
                 configMapKeyRef:
