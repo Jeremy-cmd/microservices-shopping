@@ -6,11 +6,7 @@ public class InventoryClientStub {
 
     public static void stubInventoryCall(String skuCode, Integer quantity) {
         if(quantity <= 100) {
-            stubFor(get(urlEqualTo("/api/inventory?skuCode=" + skuCode + "&quantity=" + quantity))
-                    .willReturn(aResponse()
-                            .withStatus(200)
-                            .withHeader("Content-Type", "application/json")
-                            .withBody("true")));
+            stubInventoryResponse(skuCode, quantity, true);
         }
         else {
             stubFor(get(urlEqualTo("/api/inventory?skuCode=" + skuCode + "&quantity=" + quantity))
@@ -19,5 +15,13 @@ public class InventoryClientStub {
                             .withHeader("Content-Type", "application/json")
                             .withBody("false")));
         }
+    }
+
+    public static void stubInventoryResponse(String skuCode, Integer quantity, boolean inStock) {
+        stubFor(get(urlEqualTo("/api/inventory?skuCode=" + skuCode + "&quantity=" + quantity))
+                .willReturn(aResponse()
+                        .withStatus(200)
+                        .withHeader("Content-Type", "application/json")
+                        .withBody(String.valueOf(inStock))));
     }
 }
